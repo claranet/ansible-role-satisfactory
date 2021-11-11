@@ -1,0 +1,6 @@
+---
+- name: create_user - Create steam user
+  ansible.builtin.user:
+    name: "{{ satisfactory_user }}"
+    home: "{{ satisfactory_user_home }}"
+    create_home: true

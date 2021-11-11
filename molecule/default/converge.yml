@@ -1,0 +1,11 @@
+---
+- name: Converge
+  hosts: all
+  roles:
+    - role: claranet.satisfactory
+
+    - role: claranet.satisfactory
+      satisfactory_service_name: satisfactory-test
+      satisfactory_port: 7778
+      satisfactory_serverqueryport: 15778
+      satisfactory_beaconport: 15001

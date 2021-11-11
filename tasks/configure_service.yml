@@ -1,0 +1,16 @@
+---
+- name: configure_service - Deploy service file {{ _satisfactory_systemd_service }}
+  ansible.builtin.template:
+    src: "{{ _satisfactory_systemd_service_template }}"
+    dest: /etc/systemd/system/{{ _satisfactory_systemd_service }}
+    owner: root
+    group: root
+    mode: "0644"
+  register: _satisfactory_service_template_register
+
+- name: configure_service - Start service {{ _satisfactory_systemd_service }} (It may take a while to download the game server)
+  ansible.builtin.systemd:
+    name: "{{ _satisfactory_systemd_service }}"
+    state: "{{ 'restarted' if _satisfactory_service_template_register.changed else 'started' }}"
+    enabled: true
+    daemon_reload: "{{ _satisfactory_service_template_register.changed }}"

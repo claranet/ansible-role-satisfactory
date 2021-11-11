@@ -1,0 +1,6 @@
+---
+- name: configure_apt - Update APT cache
+  ansible.builtin.apt:
+    update_cache: true
+  tags:
+    - molecule-idempotence-notest

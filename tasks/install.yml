@@ -1,0 +1,31 @@
+---
+- name: install - Install {{ _satisfactory_required_packages }}
+  ansible.builtin.package:
+    name: "{{ _satisfactory_required_packages }}"
+    state: present
+
+- name: install - Install SteamCMD from {{ _satisfactory_steamcmd_package }}
+  ansible.builtin.unarchive:
+    src: "{{ _satisfactory_steamcmd_package }}"
+    remote_src: true
+    dest: "{{ satisfactory_user_home }}"
+    mode: "0750"
+    owner: "{{ satisfactory_user }}"
+    group: "{{ satisfactory_user }}"
+    creates: "{{ satisfactory_user_home }}/linux32/steamcmd"
+
+- name: install - Apply ownership on {{ satisfactory_user_home }}/linux32/ (workaround)
+  ansible.builtin.file:
+    path: "{{ satisfactory_user_home }}/linux32/"
+    state: directory
+    mode: "0750"
+    owner: "{{ satisfactory_user }}"
+    group: "{{ satisfactory_user }}"
+
+- name: install_satisfactory - Create installation directory {{ satisfactory_install_dir }}
+  ansible.builtin.file:
+    path: "{{ satisfactory_install_dir }}"
+    state: directory
+    mode: "0750"
+    owner: "{{ satisfactory_user }}"
+    group: "{{ satisfactory_user }}"

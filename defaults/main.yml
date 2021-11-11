@@ -1,0 +1,13 @@
+---
+# defaults file for role
+satisfactory_user: steam
+satisfactory_user_home: /home/{{ satisfactory_user }}
+satisfactory_service_name: satisfactory
+satisfactory_install_dir: "{{ satisfactory_user_home }}/SatisfactoryDedicatedServer/{{ satisfactory_service_name }}"
+
+# Game options
+satisfactory_multihome: null
+satisfactory_serverqueryport: 15777
+satisfactory_beaconport: 15000
+satisfactory_port: 7777
+satisfactory_log: true

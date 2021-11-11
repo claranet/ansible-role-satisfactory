@@ -1,0 +1,17 @@
+[Unit]
+Description=Satisfactory dedicated server
+Wants=network-online.target
+After=syslog.target network.target nss-lookup.target network-online.target
+
+[Service]
+ExecStartPre={{ _satisfactory_steamcmd_install_command }}
+ExecStart={{ satisfactory_install_dir }}/FactoryServer.sh {{ _satisfactory_options }}
+User={{ satisfactory_user }}
+StandardOutput=journal
+Restart=on-failure
+KillSignal=SIGINT
+WorkingDirectory={{ satisfactory_install_dir }}
+TimeoutSec=30min
+
+[Install]
+WantedBy=multi-user.target

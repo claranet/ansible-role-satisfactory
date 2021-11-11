@@ -1,0 +1,23 @@
+galaxy_info:
+  role_name: "satisfactory"
+  namespace: "claranet"
+  description: "Install and configure Satisfactory dedicated server"
+  author: "Élie Deloumeau-Prigent"
+  company: "Claranet France"
+
+  license: "MPL2"
+
+  min_ansible_version: 2.10
+
+  galaxy_tags: ['claranet', 'satisfactory', 'system', 'game']
+
+  platforms:
+    - name: Debian
+      versions:
+        - buster
+        - bullseye
+    - name: Ubuntu
+      versions:
+        - focal
+
+dependencies: []
