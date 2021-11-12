@@ -28,4 +28,5 @@
 
 - include_tasks: create_user.yml
 - include_tasks: install.yml
+- include_tasks: configure_satisfactory.yml
 - include_tasks: configure_service.yml

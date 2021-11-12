@@ -8,9 +8,9 @@
     mode: "0644"
   register: _satisfactory_service_template_register
 
-- name: configure_service - Start service {{ _satisfactory_systemd_service }} (It may take a while to download the game server)
+- name: configure_service - {{ 'Restart' if (_satisfactory_service_template_register.changed or _satisfactory_config_file_register.changed) else 'Start' }} service {{ _satisfactory_systemd_service }} (It may take a while to download the game server)
   ansible.builtin.systemd:
     name: "{{ _satisfactory_systemd_service }}"
-    state: "{{ 'restarted' if _satisfactory_service_template_register.changed else 'started' }}"
+    state: "{{ 'restarted' if (_satisfactory_service_template_register.changed or _satisfactory_config_file_register.changed) else 'started' }}"
     enabled: true
     daemon_reload: "{{ _satisfactory_service_template_register.changed }}"

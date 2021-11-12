@@ -18,3 +18,5 @@ _satisfactory_options: >
   {{ '-BeaconPort=' + satisfactory_beaconport|string if satisfactory_beaconport }}
   {{ '?listen -Port=' + satisfactory_port|string if satisfactory_port }}
   {{ '-log' if satisfactory_log }}
+
+_satisfactory_config_dir: "{{ satisfactory_install_dir }}/FactoryGame/Saved/Config/LinuxServer/"

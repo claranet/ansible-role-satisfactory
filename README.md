@@ -23,18 +23,20 @@ ansible-galaxy install claranet.satisfactory
 
 ## :gear: Role variables
 
-Variable                     | Default value                                                                                | Description
------------------------------|----------------------------------------------------------------------------------------------|------------
-satisfactory_user            | steam                                                                                        | Server daemon users
-satisfactory_user_home       | /home/`{{ satisfactory_user }}`                                                              | Daemon user's home
-satisfactory_service_name    | satisfactory                                                                                 | SystemD service name (useful for multi instances)
-satisfactory_install_dir     | `{{ satisfactory_user_home }}`/SatisfactoryDedicatedServer/`{{ satisfactory_service_name }}` | Installation directory
-satisfactory_multihome       | _null_                                                                                       | Bind the server process to a specific IP address rather than all available interfaces
-satisfactory_serverqueryport | 15777                                                                                        | Override the Query Port the server uses. This is the port specified in the Server Manager in the client UI to establish a server connection. This can be set freely. The default port is UDP/15777
-satisfactory_beaconport      | 15000                                                                                        | Override the Beacon Port the server uses This port currently cannot be set freely. The default port is UDP/15000. If this port is already in use, the server will step up to the next port until an available one is found
-satisfactory_port            | 7777                                                                                         | Override the Game Port the server uses. This is the primary port used to communicate game telemetry with the client. The default port is UDP/7777. If it is already in use, the server will step up to the next port until an available one is found
-satisfactory_log             | true                                                                                         | Forces the server to display logs in a window (on Windows) or in the active terminal (on Linux). This option is implicit by default when launching on Linux
-
+Variable                          | Default value                                                                                | Description
+----------------------------------|----------------------------------------------------------------------------------------------|------------
+satisfactory_user                 | steam                                                                                        | Server daemon users
+satisfactory_user_home            | /home/`{{ satisfactory_user }}`                                                              | Daemon user's home
+satisfactory_service_name         | satisfactory                                                                                 | SystemD service name (useful for multi instances)
+satisfactory_install_dir          | `{{ satisfactory_user_home }}`/SatisfactoryDedicatedServer/`{{ satisfactory_service_name }}` | Installation directory
+satisfactory_multihome            | _null_                                                                                       | Bind the server process to a specific IP address rather than all available interfaces
+satisfactory_serverqueryport      | 15777                                                                                        | Override the Query Port the server uses. This is the port specified in the Server Manager in the client UI to establish a server connection. This can be set freely. The default port is UDP/15777
+satisfactory_beaconport           | 15000                                                                                        | Override the Beacon Port the server uses This port currently cannot be set freely. The default port is UDP/15000. If this port is already in use, the server will step up to the next port until an available one is found
+satisfactory_port                 | 7777                                                                                         | Override the Game Port the server uses. This is the primary port used to communicate game telemetry with the client. The default port is UDP/7777. If it is already in use, the server will step up to the next port until an available one is found
+satisfactory_log                  | true                                                                                         | Forces the server to display logs in a window (on Windows) or in the active terminal (on Linux). This option is implicit by default when launching on Linux
+satisfactory_maxplayers           | 16                                                                                           | Maximum players in game
+satisfactory_autopause            | true                                                                                         | Pause the game when no one is connected
+satisfactory_autosaveondisconnect | true                                                                                         | Save the session when the last player disconnects
 
 ## :arrows_counterclockwise: Dependencies
 

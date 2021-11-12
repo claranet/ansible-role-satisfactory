@@ -11,3 +11,6 @@ satisfactory_serverqueryport: 15777
 satisfactory_beaconport: 15000
 satisfactory_port: 7777
 satisfactory_log: true
+satisfactory_maxplayers: 16
+satisfactory_autopause: true
+satisfactory_autosaveondisconnect: true
