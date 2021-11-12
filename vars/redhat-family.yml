@@ -1,0 +1,3 @@
+---
+_satisfactory_required_packages:
+  - glibc*i686
