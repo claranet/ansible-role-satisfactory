@@ -17,7 +17,7 @@ galaxy_info:
         - 8
     - name: Amazon
       versions:
-        - 2
+        - all
     - name: Debian
       versions:
         - buster
