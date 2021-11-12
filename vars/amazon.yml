@@ -1,0 +1,4 @@
+---
+_satisfactory_required_packages:
+  - tar
+  - glibc*i686

@@ -28,6 +28,10 @@ jobs:
       fail-fast: false
       matrix:
         config:
+          - image: "amazonlinux"
+            tag: "latest"
+          - image: "centos"
+            tag: "8"
           - image: "debian"
             tag: "11"
           - image: "debian"

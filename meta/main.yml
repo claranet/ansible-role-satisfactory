@@ -12,6 +12,12 @@ galaxy_info:
   galaxy_tags: ['claranet', 'satisfactory', 'system', 'game']
 
   platforms:
+    - name: EL
+      versions:
+        - 8
+    - name: Amazon
+      versions:
+        - 2
     - name: Debian
       versions:
         - buster
