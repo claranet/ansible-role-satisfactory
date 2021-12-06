@@ -37,6 +37,7 @@ satisfactory_log                  | true                                        
 satisfactory_maxplayers           | 16                                                                                           | Maximum players in game
 satisfactory_autopause            | true                                                                                         | Pause the game when no one is connected
 satisfactory_autosaveondisconnect | true                                                                                         | Save the session when the last player disconnects
+satisfactory_experimental         | false                                                                                        | Use the experimental branch of the game server
 
 ## :arrows_counterclockwise: Dependencies
 

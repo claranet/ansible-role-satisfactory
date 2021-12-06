@@ -8,7 +8,7 @@ ansible_distro_major_version: "{{ ansible_distribution_major_version|lower|repla
 _satisfactory_required_packages: []
 _satisfactory_steamcmd_package: http://media.steampowered.com/client/steamcmd_linux.tar.gz
 _satisfactory_steamcmd_command: "{{ satisfactory_user_home }}/steamcmd.sh"
-_satisfactory_steamcmd_install_command: "{{ _satisfactory_steamcmd_command }} +login anonymous +force_install_dir {{ satisfactory_install_dir }} +app_update 1690800 validate +quit"
+_satisfactory_steamcmd_install_command: "{{ _satisfactory_steamcmd_command }} +login anonymous +force_install_dir {{ satisfactory_install_dir }} +app_update 1690800 {{ '-beta experimental' if satisfactory_experimental }} validate +quit"
 _satisfactory_systemd_service: "{{ satisfactory_service_name }}.service"
 _satisfactory_systemd_service_template: etc/systemd/system/satisfactory.service
 

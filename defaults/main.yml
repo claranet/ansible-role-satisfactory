@@ -14,3 +14,4 @@ satisfactory_log: true
 satisfactory_maxplayers: 16
 satisfactory_autopause: true
 satisfactory_autosaveondisconnect: true
+satisfactory_experimental: false
