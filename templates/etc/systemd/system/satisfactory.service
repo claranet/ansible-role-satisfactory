@@ -9,7 +9,6 @@ ExecStart={{ satisfactory_install_dir }}/FactoryServer.sh {{ _satisfactory_optio
 User={{ satisfactory_user }}
 StandardOutput=journal
 Restart=on-failure
-KillSignal=SIGINT
 WorkingDirectory={{ satisfactory_install_dir }}
 TimeoutSec=30min
 
