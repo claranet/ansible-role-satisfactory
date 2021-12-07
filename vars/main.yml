@@ -13,10 +13,10 @@ _satisfactory_systemd_service: "{{ satisfactory_service_name }}.service"
 _satisfactory_systemd_service_template: etc/systemd/system/satisfactory.service
 
 _satisfactory_options: >
-  {{ '-multihome=' + satisfactory_multihome if satisfactory_multihome }}
-  {{ '-ServerQueryPort=' + satisfactory_serverqueryport|string if satisfactory_serverqueryport }}
-  {{ '-BeaconPort=' + satisfactory_beaconport|string if satisfactory_beaconport }}
-  {{ '?listen -Port=' + satisfactory_port|string if satisfactory_port }}
+  {{ '-multihome=' + satisfactory_multihome if satisfactory_multihome else '' }}
+  {{ '-ServerQueryPort=' + satisfactory_serverqueryport|string if satisfactory_serverqueryport else '' }}
+  {{ '-BeaconPort=' + satisfactory_beaconport|string if satisfactory_beaconport else '' }}
+  {{ '?listen -Port=' + satisfactory_port|string if satisfactory_port else '' }}
   {{ '-log' if satisfactory_log }}
 
 _satisfactory_config_dir: "{{ satisfactory_install_dir }}/FactoryGame/Saved/Config/LinuxServer/"
