@@ -5,7 +5,7 @@ After=syslog.target network.target nss-lookup.target network-online.target
 
 [Service]
 ExecStartPre={{ _satisfactory_steamcmd_install_command }}
-ExecStart={{ satisfactory_install_dir }}/FactoryServer.sh {{ _satisfactory_options }}
+ExecStart={{ satisfactory_install_dir }}/FactoryServer.sh{{ _satisfactory_options }}
 User={{ satisfactory_user }}
 StandardOutput=journal
 Restart=on-failure
