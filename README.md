@@ -1,7 +1,7 @@
 # Ansible role - satisfactory
 [![License](https://img.shields.io/github/license/claranet/ansible-role-satisfactory?style=flat-square)](LICENSE)
 [![Release](https://img.shields.io/github/v/release/claranet/ansible-role-satisfactory?style=flat-square)](https://github.com/claranet/ansible-role-satisfactory/releases)
-[![Status](https://img.shields.io/github/workflow/status/claranet/ansible-role-satisfactory/Ansible%20Molecule?style=flat-square&label=tests)](https://github.com/claranet/ansible-role-satisfactory/actions?query=workflow%3A%22Ansible+Molecule%22)
+[![Status](https://img.shields.io/github/actions/workflow/status/claranet/ansible-role-satisfactory/molecule.yml?style=flat-square&label=tests)](https://github.com/claranet/ansible-role-satisfactory/actions?query=workflow%3A%22Ansible+Molecule%22)
 [![Ansible version](https://img.shields.io/badge/ansible-%3E%3D2.10-black.svg?style=flat-square&logo=ansible)](https://github.com/ansible/ansible)
 [![Ansible Galaxy](https://img.shields.io/badge/ansible-galaxy-black.svg?style=flat-square&logo=ansible)](https://galaxy.ansible.com/claranet/satisfactory)
 
