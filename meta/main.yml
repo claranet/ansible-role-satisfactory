@@ -7,14 +7,14 @@ galaxy_info:
 
   license: "MPL2"
 
-  min_ansible_version: 2.10
+  min_ansible_version: "2.10"
 
   galaxy_tags: ['claranet', 'satisfactory', 'system', 'game']
 
   platforms:
     - name: EL
       versions:
-        - 8
+        - "8"
     - name: Amazon
       versions:
         - Candidate

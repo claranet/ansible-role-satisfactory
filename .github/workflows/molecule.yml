@@ -57,8 +57,9 @@ jobs:
         config:
           - image: "amazonlinux"
             tag: "latest"
-          - image: "centos"
-            tag: "8"
+          - name: "redhat"
+            image: "registry.access.redhat.com/ubi8/ubi"
+            tag: "latest"
           - image: "debian"
             tag: "11"
           - image: "ubuntu"
